@@ -16,8 +16,6 @@ This app counts how many times the main web page has been visited.
 ---
 
 ##  Architecture
-
-```text
         +----------------------+
         |   Flask Web (App)    |
         |  - Python + Flask    |
@@ -34,7 +32,7 @@ This app counts how many times the main web page has been visited.
         +----------------------+
 ---
 
-## Run ir locally:
+## Run it locally:
 bash:
 git clone https://github.com/solj1z/flask-redis-counter.git
 cd flask-redis-counter
