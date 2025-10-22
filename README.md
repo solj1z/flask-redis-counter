@@ -1,11 +1,11 @@
-# Flask + Redis Counter App
+#  Flask + Redis Counter App
 
 A simple multi-tier web application built with **Flask (Python)** and **Redis**, orchestrated using **Docker Compose**.  
 It demonstrates **container communication, volumes, environment variables, and Docker networking**.
 
 ---
 
-## Overview
+##  Overview
 
 This app counts how many times the main web page has been visited.
 
@@ -15,7 +15,7 @@ This app counts how many times the main web page has been visited.
 
 ---
 
-## Architecture
+##  Architecture
 
 ```text
         +----------------------+
@@ -32,3 +32,19 @@ This app counts how many times the main web page has been visited.
         |      Redis DB        |
         |  - Stores counter    |
         +----------------------+
+---
+
+## Run ir locally:
+bash:
+git clone https://github.com/solj1z/flask-redis-counter.git
+cd flask-redis-counter
+docker compose up
+Then open http://localhost:5000
+
+## Development Mode (Auto Reload):
+The Flask service uses a volume to sync code changes instantly without rebuilding:
+
+volumes:
+  - .:/app
+environment:
+  - FLASK_ENV=development
